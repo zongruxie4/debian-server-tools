@@ -4,7 +4,7 @@
 # BUILD         :docker build -t szepeviktor/python-s3ql-test:stretch-0.3.0 .
 # RUN           :docker run --tty --rm --cap-add SYS_ADMIN --device /dev/fuse szepeviktor/python-s3ql-test:stretch-0.3.0
 
-FROM python:3.6-stretch
+FROM python:3.14-rc-alpine3.20
 
 # Dependencies
 RUN set -e -x \
