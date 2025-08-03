@@ -5,7 +5,7 @@
 # BUILD         :docker build --ulimit nofile=2048 -t szepeviktor/jessie-build .
 # RUN           :docker run --rm -i -t --ulimit nofile=2048 -v /opt/results:/opt/results szepeviktor/jessie-build
 
-FROM debian:jessie
+FROM debian:12.11
 
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
