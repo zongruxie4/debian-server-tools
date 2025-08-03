@@ -4,7 +4,7 @@
 # DOCS          :https://github.com/docker-library/python/blob/master/3.5/stretch/Dockerfile
 # BUILD         :docker build -t szepeviktor/python:3.5.9-stretch .
 
-FROM python:3.14.0rc1-slim-bookworm
+FROM python:3.14-rc-alpine3.20
 
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
