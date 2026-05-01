@@ -11,17 +11,16 @@ if [ "$(dpkg-query --showformat='${Status}' --show php5-cli 2>/dev/null)" == "in
     php5enmod redis
 fi
 
-#if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" == 7 ]; then
 if [ "$(dpkg-query --showformat='${Status}' --show "php${PHP}-cli" 2>/dev/null)" == "install ok installed" ]; then
     # Is php-redis available?
     if [ -n "$(aptitude --disable-columns --display-format "%p" search "?exact-name(php${PHP}-redis)")" ]; then
-        # PHP 7.x extension
+        # PHP extension
         apt-get install -y "php${PHP}-redis"
     elif [ -n "$(aptitude --disable-columns --display-format "%p" search "?exact-name(php-redis)")" ]; then
-        # PHP 7 extension
+        # PHP extension
         apt-get install -y php-redis
     else
-        # PHP 7 extension from source
+        # PHP extension from source
         apt-get install -y re2c php-dev
         git clone "https://github.com/phpredis/phpredis.git"
         (
@@ -34,7 +33,7 @@ if [ "$(dpkg-query --showformat='${Status}' --show "php${PHP}-cli" 2>/dev/null)"
             make
             make install
         )
-        chmod -x /usr/lib/php/20170718/redis.so
+        chmod -x "$(php-config --extension-dir)/redis.so"
         printf '; priority=20\nextension=redis.so\n' >"/etc/php/${PHP}/mods-available/redis.ini"
         phpenmod -v "$PHP" -s ALL redis
 

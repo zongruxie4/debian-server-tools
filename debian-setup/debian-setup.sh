@@ -82,8 +82,8 @@
 export IMAGE_ARCH="amd64"
 export IMAGE_MACHINE="x86_64"
 export IMAGE_ID="Debian"
-export IMAGE_CODENAME="bookworm"
-#export IMAGE_CODENAME="trixie"
+export IMAGE_CODENAME="trixie"
+#export IMAGE_CODENAME="forky"
 
 # "A real danger for the future of GNU/Linux"
 # https://skarnet.org/software/s6/systemd.html

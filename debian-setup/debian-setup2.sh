@@ -261,8 +261,8 @@ fi
 # Webserver reload
 Dinstall webserver/webrestart.sh
 
-# Redis server
-packages/redis-server
+# Valkey server
+packages/valkey-server
 
 if Data get-values-0 package.apt.sources | grep -z -F -x 'mysql-5.7'; then
     # MySQL 5.7 from Debian sid
