@@ -18,6 +18,7 @@ if [ "$WITHOUT_SYSTEMD" == "yes" ]; then
         # Disable terminals 2-6
         sed -i -e '/^\([2-6]\):23:respawn:\/sbin\/getty 38400 tty\1$/d' /etc/inittab
         # Prevent systemd from coming back
+        # @TODO opensysusers
         printf 'Package: systemd-standalone-sysusers\nPin: release *\nPin-Priority: 500\n' >/etc/apt/preferences.d/systemd.pref
         printf '\nPackage: systemd*\nPin: release *\nPin-Priority: -1\n' >>/etc/apt/preferences.d/systemd.pref
         # Schedule removal of systemd
