@@ -7,8 +7,12 @@ set -e -x
 test -n "$SETUP_APTSOURCESLIST_URL"
 
 # Backup current APT sources
-mv -f /etc/apt/sources.list "/etc/apt/sources.list~"
-# @TODO Handle sources.list.d/
+if [ -f /etc/apt/sources.list ]; then
+    mv -f /etc/apt/sources.list "/etc/apt/sources.list~"
+fi
+if [ -f /etc/apt/sources.list.d/debian.sources ]; then
+    mv -f /etc/apt/sources.list.d/debian.sources "/etc/apt/sources.list.d/debian.sources~"
+fi
 
 # Set APT sources
 wget -nv -O /etc/apt/sources.list "$SETUP_APTSOURCESLIST_URL"

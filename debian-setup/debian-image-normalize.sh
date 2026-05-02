@@ -20,18 +20,19 @@
 
 STANDARD_BLACKLIST="exim.*|procmail|bsd-mailx|mutt\
 |nfs-common|rpcbind\
-|intel-microcode|amd64-microcode\
+|intel-microcode|amd64-microcode|wireless-regdb\
 |ftp|mlocate|texinfo|info|install-info|debian-faq|doc-debian"
 
 # Don't ever remove these
 BOOT_PACKAGES="debian-archive-keyring|lsb-release|ca-certificates|wget|apt|apt-utils|aptitude|aptitude-common|net-tools\
-|grub-pc|grub-efi-amd64|extlinux|syslinux-common|linux-image-amd64|initramfs-tools\
+|grub-pc|grub-efi-amd64|extlinux|syslinux-common|linux-image-amd64|initramfs-tools|zstd\
 |firmware-.*|usbutils|mdadm|lvm2|xfsprogs\
 |task-ssh-server|task-english|ssh|openssh-server|isc-dhcp-client|pppoeconf|ifenslave|ethtool|vlan\
 |sysvinit|sysvinit-core|sysvinit-utils|initscripts|insserv|discover\
 |systemd|libpam-systemd|systemd-sysv|dbus\
 |open-vm-tools|open-vm-tools-dkms|dkms|sudo|cloud-init|cloud-initramfs-growroot\
-|elasticstack-container|waagent|scx|omi"
+|elasticstack-container|waagent|scx|omi\
+|netplan.io|netplan-generator|libnetplan1|python3-netplan"
 
 OLD_PACKAGE_QUERY='?and(?installed, ?or(?version(~~squeeze), ?version(\+deb6), ?version(python2\.6), ?version(~~wheezy), ?version(\+deb7), ?version(~~jessie), ?version(\+deb8)))'
 TILDE_VERSION="grub-common|grub-pc|grub-pc-bin|grub2-common|liblz4-1:amd64|os-prober|python-apt|python-apt-common|python3-apt|intel-microcode"
