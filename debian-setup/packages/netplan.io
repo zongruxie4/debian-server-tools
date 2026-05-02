@@ -33,7 +33,7 @@ cp -a /etc/network/interfaces /root/dist-mod/interfaces.netplan-stub
 
         if [ "$(Netplan get-value "network.ethernets.${IFACE}.dhcp6" "false")" == "True" ]; then
             echo "auto ${IFACE}"
-            echo "iface ${IFACE} inet6 dhcp"
+            echo "iface ${IFACE} inet6 auto"
             echo
         fi
     done

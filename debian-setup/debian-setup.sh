@@ -204,6 +204,9 @@ packages/openssh-server
 apt-get purge -qq apparmor
 printf 'Package: apparmor\nPin: release *\nPin-Priority: -1\n' >/etc/apt/preferences.d/apparmor.pref
 
+# Static resolver configuration before removing systemd-resolved
+packages/_resolv_conf
+
 # Optionally switch to SysVinit
 packages/systemd
 

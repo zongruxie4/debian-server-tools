@@ -89,11 +89,6 @@ packages/unattended-upgrades
 # Custom APT repository script
 Dinstall package/apt-add-repo.sh
 
-# @FIXME
-#packages/ifupdown
-
-packages/_resolv_conf
-
 # Micro Name Service Caching
 packages/unscd
 
