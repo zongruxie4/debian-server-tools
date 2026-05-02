@@ -73,7 +73,6 @@ find /lib/modules/ -maxdepth 1 | Titled_pager "Kernel module files"
         echo "WARNING: monolithic kernel"
     fi
 } | Titled_pager "Loaded modules"
-Titled_pager "Kernel Parameters" </etc/sysctl.conf
 if [ "$(find /etc/sysctl.d/ -mindepth 1)" != /etc/sysctl.d/README.sysctl ]; then
     find /etc/sysctl.d/ -type f -not -name README.sysctl | Titled_pager "Kernel Parameters in conf.d/"
 fi

@@ -58,9 +58,9 @@ packages/s-nail
 packages/goaccess
 
 # From backports
-# List available backports: apt-get upgrade -t bookworm-backports
+# List available backports: apt upgrade -s -t trixie-backports
 # @nonDebian
-##Pkg_install_quiet -t bookworm-backports
+##Pkg_install_quiet -t trixie-backports
 
 packages/needrestart
 
