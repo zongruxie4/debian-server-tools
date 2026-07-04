@@ -25,6 +25,7 @@ check process spamd with pidfile /run/spamd.pid
    group mail
    include /etc/monit/templates/rootbin
 
+ # https://github.com/apache/spamassassin/commits/trunk/rulesrc
  check directory spamd_rules with path /var/lib/spamassassin/compiled
    group mail
    if timestamp > 30 days then alert
