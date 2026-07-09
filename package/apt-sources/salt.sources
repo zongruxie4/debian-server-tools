@@ -1,0 +1,9 @@
+# Salt Project
+Types: deb
+URIs: https://packages.broadcom.com/artifactory/saltproject-deb
+Suites: stable
+Components: main
+Signed-By: /etc/apt/keyrings/salt-archive-keyring.pgp
+X-Key-URL: https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
+X-Key-Format: armored
+X-Documentation-URL: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
