@@ -2,6 +2,9 @@
 
 set -e -x
 
+# Remove anacron
+apt-get purge -qq anacron
+
 # Make cron log all failed jobs (exit status != 0)
 sed -i -e "s|^#\\s*\\(EXTRA_OPTS='-L 5'\\)|\\1|" /etc/default/cron
 service cron restart
