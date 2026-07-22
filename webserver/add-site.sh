@@ -154,7 +154,7 @@ openssl dgst -sha384 -binary | openssl enc -base64 -A
 # See https://sslmate.com/labs/caa/
 
 # In case of "www." set ServerAlias
-# Set WORDPRESS_ROOT_URL and WORDPRESS_UPLOADS_URL
+# Set WORDPRESS_ROOT_URL
 editor "${DOMAIN}.conf"
 # Enable site
 a2ensite "$DOMAIN"
