@@ -90,6 +90,17 @@ maxretry = 1
 bantime  = 86400
 port     = http,https
 
+[apache-trap]
+enabled  = true
+logpath  = %(apache_error_log)s
+#           %(apache_user_error_log)s
+maxretry = 1
+# 24h
+bantime  = 86400
+port     = http,https
+# Ban only
+action   = %(action_)s
+
 [apache-cf1-combined]
 #enabled  = true
 filter   = apache-combined

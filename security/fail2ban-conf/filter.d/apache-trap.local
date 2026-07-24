@@ -1,0 +1,15 @@
+# Fail2Ban filter for application traps with instant ban (maxretry = 1)
+
+# INCLUDES section is necessary: there is no apache-trap.conf
+[INCLUDES]
+
+before = apache-common.conf
+
+[Definition]
+
+#           application trap reported through PHP's error log
+failregex = ^%(_apache_error_client)s AH01071: Got error '(PHP message: )?Trap triggered: .*(, referer: \S+)?\s*$
+
+ignoreregex =
+
+# Author: Viktor Szépe

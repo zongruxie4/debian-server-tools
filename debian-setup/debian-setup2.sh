@@ -278,7 +278,7 @@ fi
 # Add the development website, needs composer
 ##webserver/add-prg-site-auto.sh
 
-# apache-default, apache-combined and apache-instant Fail2ban jails are enabled by default
+# apache-default, apache-combined, apache-instant and apache-trap Fail2ban jails are enabled by default
 service fail2ban restart
 
 # Backup

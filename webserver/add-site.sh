@@ -167,9 +167,11 @@ webreload.sh
 # Fail2ban
 fail2ban-client set apache-combined addlogpath "/var/log/apache2/${U}-ssl-error.log"
 fail2ban-client set apache-instant addlogpath "/var/log/apache2/${U}-ssl-error.log"
+fail2ban-client set apache-trap addlogpath "/var/log/apache2/${U}-ssl-error.log"
 # * Non-SSL
 fail2ban-client set apache-combined addlogpath "/var/log/apache2/${U}-error.log"
 fail2ban-client set apache-instant addlogpath "/var/log/apache2/${U}-error.log"
+fail2ban-client set apache-trap addlogpath "/var/log/apache2/${U}-error.log"
 
 # Cron jobs
 # Mute cron errors
